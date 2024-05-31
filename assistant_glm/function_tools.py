@@ -4,7 +4,7 @@ import datetime
 
 def get_weather(city_name):
 
-    amap_key = '20bbea4515b927bb9a06c33d2620e9a8'
+    amap_key = 'your_amap_api'
     try:
         addr_resp = requests.get(f"https://restapi.amap.com/v3/geocode/geo?address={city_name}&key={amap_key}")
         adcode = addr_resp.json()['geocodes'][0]['adcode']
@@ -28,7 +28,7 @@ def get_weather(city_name):
 
 def convert_currency(base_num, base_currency, target_currency):
 
-    ex_api = "3027bba1be5a2e284140451d"
+    ex_api = "your_ex_api"
     url = f"https://v6.exchangerate-api.com/v6/{ex_api}/latest/{base_currency}"
     
     try:
