@@ -1,7 +1,7 @@
 import faster_whisper
 import gradio as gr 
 
-model_path = "./model/faster-whisper-v3"
+model_path = 'your_path_to_faster_whisper'
 model = faster_whisper.WhisperModel(model_path)
 
 

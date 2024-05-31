@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModel
 import function_tools
 import function_api
 
-MODEL_PATH = os.environ.get('MODEL_PATH', '/mnt/workspace/model/chatglm3-6b/')
+MODEL_PATH = os.environ.get('MODEL_PATH', 'your_path_to_chatglm_model')
 TOKENIZER_PATH = os.environ.get("TOKENIZER_PATH", MODEL_PATH)
 
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_PATH, trust_remote_code=True)
@@ -75,7 +75,7 @@ def run_conv_glm(query,tokenizer, history, model,functions_list=None, functions=
 
 def chat_with_glm(tokenizer, model, functions_list=None, functions=None, return_function_call=True):
     
-    welcome_prompt = "Welcome to use AgentGLM, input 'stop' to terminate chat."
+    welcome_prompt = "Welcome to use ChatGLM, input 'stop' to terminate chat."
     print(welcome_prompt)
 
     history=[]

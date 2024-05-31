@@ -6,7 +6,7 @@ import numpy as np
 chat = ChatTTS.Chat()
 chat.load_models()
 
-spk_stat = torch.load('/home/ma-user/work/model/ChatTTS/asset/spk_stat.pt')
+spk_stat = torch.load('your_path_to_spk_stat.pt')
 rand_spk = torch.randn(768) * spk_stat.chunk(2)[0] + spk_stat.chunk(2)[1] 
 
 params_infer_code = {

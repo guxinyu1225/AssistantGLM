@@ -71,11 +71,11 @@ def generate_audio(text, chat_model):
     return (sample_rate, audio_data)
 
 # Initialize the ASR model
-asr_model_path = "/home/ma-user/work/model/faster-whisper-base"
+asr_model_path = "your_path_to_faster_whisper_model"
 asr_model = faster_whisper.WhisperModel(asr_model_path)
 
 # Initialize the chat model
-MODEL_PATH = os.environ.get('MODEL_PATH', '/home/ma-user/work/model/chatglm3-6b')
+MODEL_PATH = os.environ.get('MODEL_PATH', 'your_path_to_chatglm_model')
 TOKENIZER_PATH = os.environ.get("TOKENIZER_PATH", MODEL_PATH)
 
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_PATH, trust_remote_code=True)
@@ -91,7 +91,7 @@ chat_tts = ChatTTS.Chat()
 chat_tts.load_models()
 
 # Initialize tts parameters
-spk_stat = torch.load('/home/ma-user/work/model/ChatTTS/asset/spk_stat.pt')
+spk_stat = torch.load('your_path_to_tts_spk_stat.pt')
 rand_spk = torch.randn(768) * spk_stat.chunk(2)[0] + spk_stat.chunk(2)[1]   
 
 params_infer_code = {
