@@ -6,7 +6,7 @@ AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[f
 ## Usage
 
 ### Hardware Requirements
-使用`faster-whisper-base`，无量化`chatglm3-6b`以及`ChatTTS`最低显存要求为16GB
+使用`faster-whisper-base`，无量化`chatglm3-6b`以及`ChatTTS`最低显存要求为16GB。
 
 ### Environmental Installation
     git clone https://github.com/guxinyu1225/AssistantGLM.git
@@ -25,8 +25,10 @@ AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[f
 ### Demo
 运行
 
-    python assistant_glm_gradio
+    python assistant_glm/assistant_glm_gradio
 
 启动Gradio demo。
 
 注意麦克风输入时等一会再点 Submit 按钮，不然可能会出错。
+
+ChatTTS 目前好像说不了数字等字符，并且推理过程较慢，考虑后续可能换一个TTS模型
