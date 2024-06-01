@@ -3,6 +3,10 @@
 ## Introduction
 AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[faster-whisper](https://github.com/SYSTRAN/faster-whisper) + [ChatGLM3](https://github.com/THUDM/ChatGLM3) + [ChatTTS](https://github.com/2noise/ChatTTS) 的语音助手，使用function call实现查询天气、汇率、日期等功能。
 
+[AssistantGLM_figure](/figure/AssistantGLM.png)
+
+Function call 流程
+
 ## Usage
 
 ### Hardware Requirements
