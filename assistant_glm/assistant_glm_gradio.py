@@ -18,7 +18,9 @@ def transcribe(audio_file):
     for segment in segments:
         result_text += segment.text
 
-    result_text = get_t2s(result_text)
+    if info.language == 'zh':
+        result_text = get_t2s(result_text)
+
     return result_text
 
 def run_conv_glm(query, tokenizer, history, model, functions_list=None, functions=None, return_function_call=True):
