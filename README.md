@@ -1,7 +1,7 @@
 # AssistantGLM
 
 ## Introduction
-AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[faster-whisper](https://github.com/SYSTRAN/faster-whisper) + [ChatGLM3](https://github.com/THUDM/ChatGLM3) + [ChatTTS](https://github.com/2noise/ChatTTS) 的语音助手，使用function call实现查询天气、汇率、日期等功能。
+AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，一个基于[faster-whisper](https://github.com/SYSTRAN/faster-whisper) + [ChatGLM3](https://github.com/THUDM/ChatGLM3) + [ChatTTS](https://github.com/2noise/ChatTTS) 的语音助手，使用function call实现查询天气、汇率、日期等功能。
 
 ![AssistantGLM_figure](/figure/AssistantGLM.png "Function call 流程")
 
@@ -19,7 +19,7 @@ AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[f
 请从 [Hugging Face Hub](https://huggingface.co/models) 或 [Model Scope](https://modelscope.cn/)网站下载模型权重文件。
 并在代码中添加模型文件的路径。
 
-注意安装完`ChatTTS`后，需要修改`ChatTTS/core.py`中的`_load`函数，添加ChatTTS的文件路径，示例：
+注意安装完`ChatTTS`后，需要修改`/site-packages/ChatTTS/core.py`中的`_load`函数，添加ChatTTS的文件路径，示例：
 
     vocos_config_path: str = ‘/model/ChatTTS/config/vocos.yaml’
     ...
@@ -30,6 +30,8 @@ AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，是一个基于[f
     python assistant_glm/assistant_glm_gradio
 
 启动Gradio demo。
+
+![demo_figure](/figure/demo.png "Gradio demo")
 
 注意麦克风输入时等一会再点 Submit 按钮，不然可能会出错。
 
