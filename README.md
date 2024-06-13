@@ -29,7 +29,7 @@ AssistantGLM是2024-5-25华为昇思MindSpore训练营项目，一个基于[fast
 ### Demo
 运行
 
-    python assistant_glm/assistant_glm_gradio
+    python assistant_glm/assistant_glm_gradio.py
 
 启动Gradio demo。
 
